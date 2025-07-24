@@ -7,9 +7,18 @@ body {
   scroll-behavior: smooth;
 }
 
+.second{
+  background-color: #c1f2b0; /* rose plus pâle que la barre */
+  color: #fbc600;
+  font-family: 'Cursive', 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
 .top-bar {
   background-color: #ffffff;
-  padding: 20px px;
+  padding-inline: 150px;
   border-radius: 50px;
   width: 60%;
   display: flex;
@@ -53,12 +62,101 @@ body {
   pointer-events: none; /* ✅ facultatif : empêche de cliquer sur l’image */
 }
 
+.matieres {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  flex-
+}
+
+.matieres a {
+  background-color: #ffffff;
+  color: #fff;
+  padding: auto;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.matieres a:hover {
+  background-color: #78ce53;
+}
+
+.matiere-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.matiere-item {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none; /* enlève soulignement */
+  border-radius: 30px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.matiere-item img {
+  width: 250px;
+  height: auto;
+  display: block;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(120, 206, 83, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.matiere-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(120, 206, 83, 0.5);
+}
+
+.matiere-label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #c1f2b0;
+  color: #ffffff;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: 'Coiny', cursive;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  pointer-events: none;
+}
+
+
+
+.photo{
+  margin-bottom: 650px;
+  position: absolute;
+  top: 320px;
+  right: 620px;
+  align-items: center; /* ✅ place BunBun à droite de la barre */   /* ✅ dépasse vers le haut */
+  width: 150px; /* ✅ taille personnalisée */
+  height: auto;
+  z-index: 50;
+  pointer-events: none;
+}
+
+
 .Lycee {
   margin: 20px 0;
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 .Lycee a {
@@ -81,13 +179,13 @@ body {
 .main-content {
   max-width: 900px;
   margin: 0 auto;
-  padding: 30px 40px 60px 40px;
+  padding: 80px 60px 80px 60px;
   text-align: center;
   padding-top: 90px; /* Ajuste selon la hauteur exacte de ton header */
   max-width: 900px;
   margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
   text-align: center;
 }
 
@@ -95,7 +193,7 @@ body {
 .texte-bloc {
   background: #ffffff;
   position: relative;
-  padding: 30px;
+  padding: 100px;
   border-radius: 30px;
   box-shadow: 0 8 50px  ;
   margin: 50px auto;
@@ -105,10 +203,11 @@ body {
   border-color: #78ce53;
 }
 
-.bunbun-top {
+.bunbun {
+  margin-bottom: 650px;
   position: absolute;
-  top: 335px;
-  right: 630px;
+  top: 395px;
+  right: 620px;
   align-items: center; /* ✅ place BunBun à droite de la barre */   /* ✅ dépasse vers le haut */
   width: 300px; /* ✅ taille personnalisée */
   height: auto;
@@ -116,20 +215,104 @@ body {
   pointer-events: none; /* ✅ facultatif : empêche de cliquer sur l’image */
 }
 
-.custom-header {
-  background: initial;
-  position: absolute;       /* FIXE en haut */
-  top: 0px;                /* en haut de la page */
-  left: 90;
-  width: 100%;           /* toute la largeur */
-  background-color: #c1f2b0; /* même vert */
-  border: 5px solid #78ce53; /* même bordure */
-  padding: 50px 100px;
-  color: #fff;
-  text-align: center; 
-  font-family: 'Coiny', cursive;
-  z-index: 1;         /* devant tout */
-  box-sizing: border-box; /* inclut bordure dans largeur */
+.bunbun-nvp{
+   position: absolute;
+  top: 290px;
+  right: 620px;
+  align-items: center; /* ✅ place BunBun à droite de la barre */   /* ✅ dépasse vers le haut */
+  width: 300px; /* ✅ taille personnalisée */
+  height: auto;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.bunbun-nvs{
+   position: absolute;
+  top: 290px;
+  right: 620px;
+  align-items: center; /* ✅ place BunBun à droite de la barre */   /* ✅ dépasse vers le haut */
+  width: 300px; /* ✅ taille personnalisée */
+  height: auto;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.bunbun-nvt{
+   position: absolute;
+  top: 290px;
+  right: 620px;
+  align-items: center; /* ✅ place BunBun à droite de la barre */   /* ✅ dépasse vers le haut */
+  width: 300px; /* ✅ taille personnalisée */
+  height: auto;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.bunbun-amour {
+  position: absolute;
+  top: 310px;
+  right: 620px;
+  align-items: center; /* ✅ place BunBun à droite de la barre */   /* ✅ dépasse vers le haut */
+  width: 300px; /* ✅ taille personnalisée */
+  height: auto;
+  z-index: 50;
+  pointer-events: none; /* ✅ facultatif : empêche de cliquer sur l’image */
+}
+
+.bunbundiscute {
+  position: absolute;
+  top: 250px;
+  right: 575px;
+  align-items: center; /* ✅ place BunBun à droite de la barre */   /* ✅ dépasse vers le haut */
+  width: 400px; /* ✅ taille personnalisée */
+  height: auto;
+  z-index: 50;
+  pointer-events: none; /* ✅ facultatif : empêche de cliquer sur l’image */
+}
+
+.bunbun-stylos {
+  position: absolute;
+  top: 310px;
+  right: 620px;
+  align-items: center; /* ✅ place BunBun à droite de la barre */   /* ✅ dépasse vers le haut */
+  width: 300px; /* ✅ taille personnalisée */
+  height: auto;
+  z-index: 50;
+  pointer-events: none; /* ✅ facultatif : empêche de cliquer sur l’image */
+}
+
+.bunbun-photo {
+  position: absolute;
+  top: 310px;
+  right: 620px;
+  align-items: center; /* ✅ place BunBun à droite de la barre */   /* ✅ dépasse vers le haut */
+  width: 300px; /* ✅ taille personnalisée */
+  height: auto;
+  z-index: 50;
+  pointer-events: none; /* ✅ facultatif : empêche de cliquer sur l’image */
+}
+
+
+.bunbun-cahiers {
+  position: absolute;
+  top: 310px;
+  right: 620px;
+  align-items: center; /* ✅ place BunBun à droite de la barre */   /* ✅ dépasse vers le haut */
+  width: 300px; /* ✅ taille personnalisée */
+  height: auto;
+  z-index: 50;
+  pointer-events: none; /* ✅ facultatif : empêche de cliquer sur l’image */
+}
+
+.bunbun-top {
+  position: absolute;
+  top: 370px;
+  right: 620px;
+  align-items: center; /* ✅ place BunBun à droite de la barre */   /* ✅ dépasse vers le haut */
+  width: 300px; /* ✅ taille personnalisée */
+  height: auto;
+  z-index: 50;
+  pointer-events: none; /* ✅ facultatif : empêche de cliquer sur l’image */
 }
 
 
@@ -138,7 +321,7 @@ h1 {
   font-family: "Coiny", system-ui;
   font-weight: 400;
   font-style: normal;
-  margin-top: 150px;
+  margin-top: 120px;
   margin-bottom: 10px;
   color: #fbc600;
   text-shadow: 1px 1px #ffde63;
@@ -157,10 +340,11 @@ p {
   background: #fff;
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 0 15px rgba(251, 198, 0, 0.6);
+  box-shadow: 0 0 15px rgb(59 192 57 / 60%);
   margin: 20px auto;
   font-style: normal;
   border-color: #78ce53;
+  margin-bottom: 60px;
 }
 
 img {

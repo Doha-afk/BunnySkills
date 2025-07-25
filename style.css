@@ -24,7 +24,6 @@ body {
   display: flex;
   gap: 20px;
   justify-content: center;
-  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.6);
   z-index: 100;
   height: 70px;
   align-items: center;
@@ -42,7 +41,6 @@ body {
 
 .top-bar a {
   background-color: #c1f2b0; /* si vous souhaitez garder le fond */
-  border: 2px solid #78ce53; /* bordure visible */
   padding: 5px 10px; /* espace autour du texte pour la bordure */
   border-radius: 8px; /* pour un rendu arrondi */
   color: #ffffff; /* couleur du texte */

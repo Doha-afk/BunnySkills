@@ -1,5 +1,5 @@
 body {
-  background-color: #ffde63; /* rose plus pâle que la barre */
+  background-color: #fbc600; /* rose plus pâle que la barre */
   color: #fbc600;
   font-family: 'Cursive', 'Georgia', serif;
   margin: 0;
@@ -24,6 +24,7 @@ body {
   display: flex;
   gap: 20px;
   justify-content: center;
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.6);
   z-index: 100;
   height: 70px;
   align-items: center;
@@ -40,10 +41,10 @@ body {
 }
 
 .top-bar a {
-  background-color: #c1f2b0; /* si vous souhaitez garder le fond */
+  background-color: #ffffff; /* si vous souhaitez garder le fond */
   padding: 5px 10px; /* espace autour du texte pour la bordure */
   border-radius: 8px; /* pour un rendu arrondi */
-  color: #ffffff; /* couleur du texte */
+  color: #ffde63; /* couleur du texte */
   text-decoration: none; /* pour supprimer le soulignement si nécessaire */
 }
 
@@ -191,6 +192,7 @@ body {
   position: relative;
   padding: 100px;
   border-radius: 30px;
+  box-shadow: 0 8 50px  ;
   margin: 50px auto;
   margin-top: 200px;
   max-width: 700px;
